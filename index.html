@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Hint App</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+      <link rel='stylesheet' href='css/normalize.min.css'>
+  		<link rel='stylesheet' href='css/main.css'>
+    </head>
+    <body>
+		<!--[if lt IE 7]>
+		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+      <div class="container">
+        <div class="hero">
+          <a class="hero__logo" href="/"><img srcset="images/logo.png 1x, images/logo@2x.png 2x" /></a>
+          <h1>Navigation with Freedom to Explore</h1>
+          <h2>Explore your surroundings and discover new places.</h2>
+          <a class="hero__appstore" href="/"><img srcset="images/appstore.png 1x, images/appstore@2x.png 2x" /></a>
+          <div class="hero__main-screen">
+            <img srcset="images/navigation.png 1x, images/navigation@2x.png 2x" />
+          </div>
+          <div class="hero__screens">
+            <img class="hero__screens__search" srcset="images/search.png 1x, images/search@2x.png 2x" />
+            <img class="hero__screens__map" srcset="images/map.png 1x, images/map@2x.png 2x" />
+          </div>
+          <div class="hero__angle"></div>
+        </div>
+        <div class="main">
+          <div class="main__content">
+            <h1>A Minimalist Navigation App for iOS</h1>
+            <p>Hint is a navigation stripped down to it’s core. It lets you know where your destination is based on your current location and lets you decide on how to get there.</p>
+            <a class="main__appstore" href="/"><img srcset="images/appstore.png 1x, images/appstore@2x.png 2x" /></a>
+          </div>
+          <footer class="footer">
+            <div class="footer__content">
+              <div class="footer__copy">
+                &copy; Hint 2017 All Rights Reserved
+              </div>
+              <div class="footer__support">
+                Support: <a href="">Twitter</a> / <a href="">Email</a>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+      <script>
+        var $ = document.querySelector.bind(document);
+        function throttle(fn, limit) {
+          var wait = false;
+          return function() {
+            if (!wait) {
+              fn.call();
+              wait = true;
+              setTimeout(function() {
+                wait = false;
+              }, limit);
+            }
+          }
+        }
+        if ($) {
+          window.onscroll = throttle(function() {
+            var offset = document.body.scrollTop;
+            $('.hero__screens__search').style.transform = 'translateY('+ offset * 0.2 +'px)';
+            $('.hero__screens__map').style.transform = 'translateY('+ offset * 0.1 +'px)';
+            $('.hero__main-screen').style.transform = 'translateY('+ offset * -0.05 +'px)';
+          }, 10);
+        }
+      </script>
+    </body>
+</html>

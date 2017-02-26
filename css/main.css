@@ -1,0 +1,204 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+  font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-size: 1em;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+a {
+  color: #3BBCF4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Hint Landing Page
+   ========================================================================== */
+
+
+.hero {
+  position: relative;
+  text-align: center;
+  background: #212835;
+  color: #fff;
+  padding-top: 100px;
+  background-repeat: repeat-x;
+  background-image: -webkit-image-set(url("../images/background.png") 1x,
+                                      url("../images/background@2x.png") 2x);
+
+}
+
+.hero__logo {
+  margin-bottom: 40px;
+  display: inline-block;
+}
+
+.hero h1 {
+  font-weight: normal;
+  color: #3BBCF4;
+  margin: 0;
+  font-size: 1.4em;
+}
+
+.hero h2 {
+  font-size: 1.2em;
+  margin: 0;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.hero__appstore {
+  display: inline-block;
+  margin-top: 40px;
+}
+
+
+.hero__screens {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  width: 100%;
+}
+
+.hero__screens img {
+  position: relative;
+  margin: 0 30px;
+}
+
+.hero__main-screen {
+  z-index: 100;
+  position: absolute;
+  width: 100%;
+  bottom: -100px;
+}
+
+.hero__screens img,
+.hero__main-screen img {
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.hero__screens__map,
+.hero__screens__search {
+  top: 120px;
+}
+
+.hero__angle {
+  background: #fff;
+  transform: skewY(-5deg) translateY(-50px);
+  position: absolute;
+  bottom: -150px;
+  width: 100%;
+  height: 200px;
+}
+
+.main {
+  text-align: center;
+  padding: 180px 20px 0 20px;
+  background: linear-gradient(#fff 20%, #EAEDF8);
+}
+
+.main__content {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.main--dark {
+  background: #1B212C;
+  color: #fff;
+}
+
+.main__appstore {
+  display: inline-block;
+  margin: 2em 0;
+}
+
+.main h1 {
+  font-size: 1.8em;
+}
+
+.main p {
+  font-size: 1.2em;
+}
+
+.footer {
+  margin-top: 80px;
+}
+
+.footer__content {
+  border-top: 1px solid rgba(0,0,0,0.05);
+  max-width: 1024px;
+  padding: 20px 0 40px 0;
+  margin: 0 auto;
+  color: rgba(0,0,0,0.7);
+  display: flex;
+}
+
+.footer__support {
+  flex-grow: 1;
+  text-align: right;
+}
+
+@media (min-width: 1450px) {
+  body {
+    background: #DDD;
+  }
+
+  .container {
+    border-radius: 5px;
+    width: 1440px;
+    margin: 20px auto;
+    overflow: hidden;
+  }
+}
