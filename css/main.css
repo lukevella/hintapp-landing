@@ -70,6 +70,7 @@ a {
 .hero {
   position: relative;
   text-align: center;
+  min-height: 800px;
   background: #212835;
   color: #fff;
   padding-top: 100px;
