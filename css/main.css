@@ -106,22 +106,24 @@ a {
 
 
 .hero__screens {
-  display: flex;
+  position: relative;
+  margin: 0 auto;
   overflow: hidden;
   justify-content: center;
-  width: 100%;
+  max-width: 940px;
+  min-width: 600px;
+  height: 500px;
 }
 
 .hero__screens img {
-  position: relative;
-  margin: 0 30px;
+  position: absolute;
 }
 
 .hero__main-screen {
   z-index: 100;
   position: absolute;
   width: 100%;
-  bottom: -100px;
+  bottom: -200px;
 }
 
 .hero__screens img,
@@ -130,8 +132,16 @@ a {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-.hero__screens__map,
+.hero__screens__map {
+  right: 20px;
+}
+
 .hero__screens__search {
+  left: 20px;
+}
+
+.hero__screens__search,
+.hero__screens__map {
   top: 120px;
 }
 

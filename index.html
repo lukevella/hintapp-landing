@@ -68,10 +68,12 @@
         }
         if ($) {
           window.onscroll = throttle(function() {
-            var offset = document.body.scrollTop;
-            $('.hero__screens__search').style.transform = 'translateY('+ offset * 0.2 +'px)';
-            $('.hero__screens__map').style.transform = 'translateY('+ offset * 0.1 +'px)';
-            $('.hero__main-screen').style.transform = 'translateY('+ offset * -0.05 +'px)';
+            window.requestAnimationFrame(function() {
+              var offset = document.body.scrollTop;
+              $('.hero__screens__search').style.transform = 'translateY('+ Math.round(offset * 0.2) +'px)';
+              $('.hero__screens__map').style.transform = 'translateY('+ Math.round(offset * 0.1) +'px)';
+              $('.hero__main-screen').style.transform = 'translateY('+ Math.round(offset * -0.1) +'px)';
+            });
           }, 10);
         }
       </script>
