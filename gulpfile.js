@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var copy = require('gulp-copy');
 var uglifycss = require('gulp-uglifycss');
 var htmlmin = require('gulp-htmlmin');
 const imagemin = require('gulp-imagemin');
@@ -25,5 +26,9 @@ gulp.task('image', function () {
     .pipe(gulp.dest('dist/images'));
 });
 
+gulp.task('copy', function () {
+  gulp.src(['favicon.ico','./favicon/*'])
+    .pipe(copy('dist'))
+});
 
-gulp.task('default', ['html', 'css', 'image']);
+gulp.task('default', ['html', 'css', 'image', 'copy']);
