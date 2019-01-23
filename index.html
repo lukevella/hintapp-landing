@@ -84,13 +84,11 @@
         }
         if ($) {
           window.onscroll = throttle(function() {
-            window.requestAnimationFrame(function() {
-              var offset = window.scrollY;
-              $('.hero__screens__search').style.transform = 'translateY('+ Math.round(offset * 0.2) +'px)';
-              $('.hero__screens__map').style.transform = 'translateY('+ Math.round(offset * 0.1) +'px)';
-              $('.hero__main-screen').style.transform = 'translateY('+ Math.round(offset * -0.1) +'px)';
-            });
-          }, 10);
+            var offset = window.scrollY;
+            $('.hero__screens__search').style.transform = 'translateY('+ Math.round(offset * 0.2) +'px)';
+            $('.hero__screens__map').style.transform = 'translateY('+ Math.round(offset * 0.1) +'px)';
+            $('.hero__main-screen').style.transform = 'translateY('+ Math.round(offset * -0.1) +'px)';
+          }, 100);
         }
       </script>
     </body>
